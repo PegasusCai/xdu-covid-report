@@ -1,0 +1,22 @@
+toast("开始运行")
+launchApp("微信")
+setScreenMetrics(1080, 1920);
+sleep(1000)
+click('西安电子科技大学')
+sleep(1000)
+click(0,199,1080,376)
+while(!click('所在地点'))
+{
+    scrollDown()
+}
+sleep(1000)
+while(!click('提交信息'))
+{
+    scrollDown()
+}
+sleep(1000)
+toast('填报成功，结束运行')
+for(i=0;i<3;i++)
+{back()
+sleep(500)
+}
